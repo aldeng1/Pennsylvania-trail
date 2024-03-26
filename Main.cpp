@@ -1,27 +1,15 @@
 #include<iostream>
 #include <cstdlib> 
 
-
-
 #include"begingameselection.h"
 #include"nameanddateselection.h"
 #include"TrailStops.h"				//trailstops stop;    100 Harrisburg  200 State College    350  Pittsburgh     500 Erie
-//#include""
-//#include""
-//#include""
-//#include""
-//#include""
-
-
-
-
-
-
 
 
 
 int main()
 {
+
 	int distance = 0, score = 0;
 
 	begingameselection start;
@@ -33,40 +21,38 @@ int main()
 
 
 
-
-
-
-	stop.Philadelphia(distance);
+	stop.Philadelphia(&distance);
 
 	while (distance < 500)		//Miles from Philadelphia to Lake Erie
 	{
 
 
-
-
-
-
 		if (distance % 5 == 0)			//Stops the code every 5 miles so the player can have a chnace to look at map/hunter/inventory menu
 		{
-			stop.midtrail(distance);
+			std::cout << "You have traveled " << distance << " miles so far!" << std::endl;
+			std::cout << std::endl;
+			stop.midtrail(&distance);
 		}
-
-
-
 
 
 
 		if (distance==100) 
 		{
-			stop.Harrisburg(distance);
+			std::cout << "You have traveled " << distance << " miles so far!" << std::endl;
+			std::cout << std::endl;
+			stop.Harrisburg(&distance);
 		}
 		if (distance == 200)
 		{
-			stop.StateCollege(distance);
+			std::cout << "You have traveled " << distance << " miles so far!" << std::endl;
+			std::cout << std::endl;
+			stop.StateCollege(&distance);
 		}
 		if (distance == 350)
 		{
-			stop.Pittsburgh(distance);
+			std::cout << "You have traveled " << distance << " miles so far!" << std::endl;
+			std::cout << std::endl;
+			stop.Pittsburgh(&distance);
 		}
 
 		distance = distance + 1;

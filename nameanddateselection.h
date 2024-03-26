@@ -51,6 +51,17 @@ public:
         std::cin >> monthnumber;
         std::cout<<std::endl;
 
+        while (monthnumber != 6 && monthnumber != 5 && monthnumber != 4 && monthnumber != 3 && monthnumber != 2 && monthnumber != 1)
+        {
+            std::cout << "Please choose a number between 1-6." << std::endl;
+
+            std::cout << std::endl;
+            std::cout << "Which month would you like to leave for your adventure!" << std::endl;
+            std::cout << "1. March \n2. April \n3. May \n4. June\n5. July\n6. August" << std::endl;
+            std::cin >> monthnumber;
+            std::cout << std::endl;
+        }
+
         remainingNames = 5;
 
         srand(time(nullptr)); // Seed the random number generator

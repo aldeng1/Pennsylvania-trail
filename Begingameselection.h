@@ -17,12 +17,15 @@ class begingameselection
 	{
 		std::cout << "1. Travel on the Pennsylvania Trail \n2. Learn about the Trail \n3. End Program." << std::endl;
 		std::cin >> number;
+		std::cout << std::endl;
+		
 
 		while (number != 3 && number != 2 && number != 1)
 		{
 			std::cout << "Please choose a number between 1-3." << std::endl;
 			std::cout << "1. Travel on the Pennsylvania Trail \n2. Learn about the Trail \n3. End Program." << std::endl;
 			std::cin >> number;
+			std::cout << std::endl;
 		}
 
 
@@ -31,6 +34,7 @@ class begingameselection
 			std::cout << "1. Be a Banker from Boston \n2. Be a carpenter from Ohio \n3. Be a farmer from Illinois \n4. Learn the differences between the choices" << std::endl;
 			//Fix to make Pennsylvania related
 			std::cin >> characternumber;
+			std::cout << std::endl;
 
 			while (characternumber != 4 && characternumber != 3 && characternumber != 2 && characternumber != 1)
 			{
@@ -38,6 +42,7 @@ class begingameselection
 				std::cout << "1. Be a Banker from Boston \n2. Be a carpenter from Ohio \n3. Be a farmer from Illinois \n4. Learn the differences between the choices" << std::endl;
 				//Fix to make Pennsylvania related
 				std::cin >> characternumber;
+				std::cout << std::endl;
 			}
 
 			if (characternumber == 4)
@@ -50,7 +55,8 @@ class begingameselection
 				{
 					std::cout << "Please choose a number between 1-3." << std::endl;
 					std::cout << "1. Be a Banker from Boston \n2. Be a carpenter from Ohio \n3. Be a farmer from Illinois \n4. Learn the differences between the choices" << std::endl;		//Fix to make Pennsylvania related
-					std::cin >> characternumber;					
+					std::cin >> characternumber;	
+					std::cout << std::endl;
 				}
 			}
 
@@ -68,6 +74,7 @@ class begingameselection
 				std::cout << "Please choose a number between 1-3." << std::endl;
 				std::cout << "1. Be a Banker from Boston \n2. Be a carpenter from Ohio \n3. Be a farmer from Illinois \n4. Learn the differences between the choices" << std::endl;		//Fix to make Pennsylvania related
 				std::cin >> characternumber;
+				std::cout << std::endl;
 			}
 
 		}
