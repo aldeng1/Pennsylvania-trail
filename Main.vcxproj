@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Begingameselection.h" />
+    <ClInclude Include="probabilities.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="nameanddateselection.h" />

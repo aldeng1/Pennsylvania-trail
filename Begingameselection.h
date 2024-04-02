@@ -106,15 +106,15 @@ class begingameselection
 
 		if (characternumber == 1)
 		{
-			initialcash = 400;
+			initialcash = 1000;
 		}
 		else if (characternumber == 2)
 		{
-			initialcash = 800;
+			initialcash = 1500;
 		}
 		else if (characternumber == 3)
 		{
-			initialcash = 1200;
+			initialcash = 2000;
 		}
 	}
 

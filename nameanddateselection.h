@@ -110,6 +110,11 @@ public:
 
     }
 
+    int getremainingnames()
+    {
+        return remainingNames;
+    }
+
 
 };
 

@@ -12,7 +12,7 @@ private:
     int horsec,wheelc,foodc,bulletc;
     int costhorse, costwheel, costfood,costbullet;
     int number, bank=0;
-    int horses=0, wheels=0, food=0, bullets=0;
+    int horses=0, wheels=4, food=0, bullets=0;
 
     begingameselection setcash;
 
