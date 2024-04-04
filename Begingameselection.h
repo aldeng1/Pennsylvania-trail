@@ -1,10 +1,6 @@
 #pragma once
 #include<iostream>
 
-
-
-
-
 class begingameselection
 {
 	private:
@@ -50,7 +46,7 @@ class begingameselection
 			{					
 				std::cout << "The Pennsylvania Trail is very challenging and each character has an easier or harder difficulty. There will be many \n"
 							"challenges along the way for which travellers will not make it through. The more money you have the more of a chance you have \n"
-							"to survive the journey. The football player has the has the most money and the redneck has the least amount of money."<< std::endl;
+							"to survive the journey. The football player has the most money and the redneck has the least amount of money."<< std::endl;
 
 				while (characternumber != 3 && characternumber != 2 && characternumber != 1)
 				{
@@ -65,8 +61,8 @@ class begingameselection
 		else if (number == 2)
 		{
 			std::cout << "This adventure is nothing like you have ever experience before. You will be challenged by weather, food, theifs, disease, and much more.\n"
-						"You must plan when you depart, how much food you keep on reserve, how much hunting you do, and you still might not make it. Be sure no\n"
-						"spend all your money right away because you will need it for the future to purchase more food, horses, wheels, and bullets. Good luck\n"
+						"You must plan when you depart, how much food you keep on reserve, how much hunting you do, and you still might not make it. Be sure not\n"
+						"to spend all your money right away because you will need it for the future to purchase more food, horses, wheels, and bullets. Good luck\n"
 						"on your jouney across the Pennsylvania Trail and be sure to watch out for choices that you must make as you make your way!"<< std::endl<<std::endl;
 
 			std::cout << "1. Redneck from the Poconos \n2. Amish from Lancatser \n3. Eagles Football Player \n4. Learn the differences between the choices" << std::endl;
@@ -87,7 +83,7 @@ class begingameselection
 			{
 				std::cout << "The Pennsylvania Trail is very challenging and each character has an easier or harder difficulty. There will be many \n"
 					"challenges along the way for which travellers will not make it through. The more money you have the more of a chance you have \n"
-					"to survive the journey. The football player has the has the most money and the redneck has the least amount of money." << std::endl;
+					"to survive the journey. The football player has the most money and the redneck has the least amount of money." << std::endl;
 
 				while (characternumber != 3 && characternumber != 2 && characternumber != 1)
 				{

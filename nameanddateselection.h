@@ -4,23 +4,24 @@
 #include <cstdlib> 
 #include <ctime>  
 #include<vector>
+#include <stdlib.h>
 
+int remainingNames;
+int monthnumber;
+std::string names[5];    // Array to store 5 names
+std::vector<std::string> names2; // Vector to store names
+std::string name3;
 
-
-class nameanddateselection {
-
+class nameanddateselection
+{
 private:
 
-    std::string names[5];    // Array to store 5 names
-    int monthnumber;
     bool picked[5] = { false };     // Array to keep track of picked names
-    int remainingNames;     // Number of names remaining to be picked
     int index;
-    std::vector<std::string> names2; // Vector to store names
 
 public:
 
-    nameanddateselection() 
+    void nameanddateselectionfunc()
     {
 
         for (int i = 0; i < 5; ++i)
@@ -46,10 +47,14 @@ public:
 
         std::cout << std::endl;
         std::cout << "Which month would you like to leave for your adventure!" << std::endl; 
-        //Need to give a small monolauge about the benifits of leaving early or late, follow how the original game does it
-        std::cout << "1. March \n2. April \n3. May \n4. June\n5. July\n6. August" << std::endl;
+        std::cout << "1. February\n2. March \n3. April \n4. May \n5. June\n6. July\n7. Learn more about leaving during different months." << std::endl;
         std::cin >> monthnumber;
         std::cout<<std::endl;
+
+        if (monthnumber == 7)
+        {
+         std::cout << "Temperature is your greatest challenge. Leave during the most optimal time, and worry less about cold freezing weather along your jounrey." << std::endl << std::endl;
+        }
 
         while (monthnumber != 6 && monthnumber != 5 && monthnumber != 4 && monthnumber != 3 && monthnumber != 2 && monthnumber != 1)
         {
@@ -57,7 +62,7 @@ public:
 
             std::cout << std::endl;
             std::cout << "Which month would you like to leave for your adventure!" << std::endl;
-            std::cout << "1. March \n2. April \n3. May \n4. June\n5. July\n6. August" << std::endl;
+            std::cout << "1. February\n2. March \n3. April \n4. May \n5. June\n6. July\n" << std::endl;
             std::cin >> monthnumber;
             std::cout << std::endl;
         }
@@ -65,11 +70,6 @@ public:
         remainingNames = 5;
 
         srand(time(nullptr)); // Seed the random number generator
-
-    }
-
-    ~nameanddateselection()
-    {
 
     }
 
@@ -89,12 +89,13 @@ public:
         return names[index];
     }
 
-    std::string getnamepassaway() 
+    std::string* getnamepassaway() 
     {
         if (remainingNames == 0) 
         {
-            return "Your Adventure is over! All of your travellers have passed away.";
+            std::cout << "Your Adventure is over! All of your travellers have passed away." << std::endl;
             exit(0);
+    
         }
 
         do 
@@ -106,7 +107,9 @@ public:
         picked[index] = true;
         remainingNames--;
 
-        return names[index];
+        name3 = names[index];
+
+        return &name3;
 
     }
 

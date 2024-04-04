@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 
-#include "Begingameselection.h"
+#include "trailstops.h"
+
+int horses, wheels=4, bullets, food;          //global varaibles
 
 
 class store
@@ -11,18 +13,19 @@ private:
 
     int horsec,wheelc,foodc,bulletc;
     int costhorse, costwheel, costfood,costbullet;
-    int number, bank=0;
-    int horses=0, wheels=4, food=0, bullets=0;
-
-    begingameselection setcash;
+    int number, bank;
+    int i =1;
 
 public:
 
-
-    void store1()
+    virtual void store1(int bankstart)
     {
 
-        bank=setcash.getinitialcash();
+        if (i == 1)
+        {
+            bank = bankstart;
+            i = i + 1;
+        }
 
         while (number != 5)
         {
@@ -50,7 +53,7 @@ public:
             std::cout << std::endl << "Your bank balance is " << bank << std::endl;
 
 
-            if (number = 1)
+            if (number == 1)
             {
 
                 std::cout << "How many horses would you like to purchase." << std::endl;
@@ -69,12 +72,13 @@ public:
                 {
                     bank = bank - costhorse;
 
-                    std::cout << "You now have " << bank << " dollars left." << std::endl;
+                    std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
 
-
+                    horses = horses + horsec;
                 }
+
             }
-            if (number = 2)
+            if (number == 2)
             {
 
                 std::cout << "How many spare wheels would you like to purchase." << std::endl;
@@ -93,11 +97,13 @@ public:
                 {
                     bank = bank - costwheel;
 
-                    std::cout << "You now have " << bank << " dollars left." << std::endl;
+                    std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
+
+                    wheels = wheels + wheelc;
                 }
 
             }
-            if (number = 3)
+            if (number == 3)
             {
 
                 std::cout << "How many pounds of food would you like to purchase." << std::endl;
@@ -116,13 +122,13 @@ public:
                 {
                     bank = bank - costfood;
 
-                    std::cout << "You now have " << bank << " dollars left." << std::endl;
+                    std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
 
-
+                    food = food + foodc;
                 }
 
             }
-            if (number = 4)
+            if (number == 4)
             {
 
                 std::cout << "How many bullets would you like to purchase." << std::endl;
@@ -141,10 +147,12 @@ public:
                 {
                     bank = bank - costbullet;
 
-                    std::cout << "You now have " << bank << " dollars left." << std::endl;
+                    std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
+                    bullets = bullets + bulletc;
                 }
             }
         }
+        number = 0;
     }
 
     int gethorses()
@@ -172,34 +180,38 @@ public:
         return bank;
     }
 
-    void sethorses(int dechorses)
+    template <typename T>
+
+    void sethorses(T dechorses)
     {
         horses = horses - dechorses;
     }
 
-    void setwheels(int decwheels)
+    template <typename T>
+
+    void setwheels(T decwheels)
     {
         wheels = wheels - decwheels;
     }
 
-    void setfoodmore(int incfood)
+    template <typename T>
+
+    void setfoodmore(T incfood)
     {
         food = food + incfood;
     }
 
-    void setfoodless(int decfood)
+    template <typename T>
+
+    void setfoodless(T decfood)
     {
         food = food - decfood;
     }
 
-    void setbullets(int decbullets)
+    template <typename T>
+
+    void setbullets(T decbullets)
     {
         bullets = bullets - decbullets;
     }
-
-    void setbank(int decbank)
-    {
-        bank = bank - decbank;
-    }
-
 };

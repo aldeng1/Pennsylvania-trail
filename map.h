@@ -1,12 +1,9 @@
 #pragma once
 #include<iostream>
 
-
 class mapdata
 {
 private:
-
-
 
 public:
 
