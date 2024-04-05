@@ -1,9 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 #include <cstdlib> 
 #include <ctime>  
-#include<vector>
+#include <vector>
 #include <stdlib.h>
 
 int remainingNames;
@@ -11,13 +11,12 @@ int monthnumber;
 std::string names[5];    // Array to store 5 names
 std::vector<std::string> names2; // Vector to store names
 std::string name3;
+bool picked[5] = { false };     // Array to keep track of picked names
+int index;
 
 class nameanddateselection
 {
 private:
-
-    bool picked[5] = { false };     // Array to keep track of picked names
-    int index;
 
 public:
 
@@ -93,7 +92,7 @@ public:
     {
         if (remainingNames == 0) 
         {
-            std::cout << "Your Adventure is over! All of your travellers have passed away." << std::endl;
+            std::cout << "Your Adventure is over! All of your travellers have passed away. Better luck next time." << std::endl;
             exit(0);
     
         }

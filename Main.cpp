@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 #include <cstdlib> 
-#include<string>
+#include <string>
 
 #include"begingameselection.h"
 #include"nameanddateselection.h"

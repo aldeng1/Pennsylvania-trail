@@ -34,7 +34,7 @@ class probabilities
 			prob1 = dis(gen);
 
 
-			if (prob1 < 2)
+			if (prob1 < 1)
 			{
 				std::string* name = chance.getnamepassaway();
 			
@@ -55,7 +55,7 @@ class probabilities
 
 			prob2 = dis(gen2);
 
-			if (prob2 <3)
+			if (prob2 <2)
 			{
 				update.sethorses(1);
 
@@ -78,7 +78,7 @@ class probabilities
 
 			prob3 = dis(gen3);
 
-			if (prob3 < 6)
+			if (prob3 < 4)
 			{
 				update.setwheels(1);
 

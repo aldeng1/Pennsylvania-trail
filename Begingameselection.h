@@ -60,10 +60,11 @@ class begingameselection
 		}
 		else if (number == 2)
 		{
-			std::cout << "This adventure is nothing like you have ever experience before. You will be challenged by weather, food, theifs, disease, and much more.\n"
-						"You must plan when you depart, how much food you keep on reserve, how much hunting you do, and you still might not make it. Be sure not\n"
-						"to spend all your money right away because you will need it for the future to purchase more food, horses, wheels, and bullets. Good luck\n"
-						"on your jouney across the Pennsylvania Trail and be sure to watch out for choices that you must make as you make your way!"<< std::endl<<std::endl;
+			std::cout << "This adventure is nothing like you have experienced before. You will be challenged by weather, food, thieves, disease, and more.\n"
+						"You must plan your depart, how much food you keep on reserve, the hunting you will do, and you still might not make it. Be sure not\n"
+						"to spend all your money right away, because you will need it for the future to purchase more food, horses, wheels, and bullets. Good luck\n"
+						"on your jouney across the Pennsylvania Trail and be sure to watch out for choices you'll make along your way!"
+						"You will need at least 2 horses and 100 pounds of food to make it to Harrisburg with no disasters occuring."<< std::endl<<std::endl;
 
 			std::cout << "1. Redneck from the Poconos \n2. Amish from Lancatser \n3. Eagles Football Player \n4. Learn the differences between the choices" << std::endl;
 

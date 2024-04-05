@@ -186,7 +186,6 @@ public:
 					std::uniform_int_distribution<> dis2(0, 50);
 					std::uniform_int_distribution<> dis3(0, 99);
 
-					hunting = dis2(gen1);
 					prob = dis2(gen2);
 
 					if (prob<4)
@@ -194,14 +193,18 @@ public:
 						std::string* name = chance1.getnamepassaway();
 						std::cout<< *name <<" has accentially shot themselves while trying to hunt and passed away. Remember there is always a chance hunting does not go as planned" << std::endl << std::endl;
 					}
+					else
+					{
+						hunting = dis2(gen1);
 
-					std::cout << "You have collected " << hunting << " pounds of food hunting." << std::endl;
+						std::cout << "You have collected " << hunting << " pounds of food hunting." << std::endl;
 
-					supplies.setbullets(5);			//bullets lost from hunting
-					supplies.setfoodmore(hunting);		//food added to current food supplies
+						supplies.setbullets(5);			//bullets lost from hunting
+						supplies.setfoodmore(hunting);		//food added to current food supplies
 
-					counter=counter+1;
-
+						counter = counter + 1;
+					}
+					counter = counter + 1;
 				}
 				else if(counter>0)
 				{
