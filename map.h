@@ -1,19 +1,19 @@
 #pragma once
 #include<iostream>
 
-class mapdata
+class mapdata			//mapdata class to output the new map for distance traveled
 {
 private:
 
 public:
 
-	void map(int* distance)
+	void map(int* distance)			//mapfunction to output the new map for distance traveled calling in distnace value
 	{
 		std::cout << std::endl;
 		std::cout <<"You have traveled " << *distance <<" miles so far!" << std::endl;
 		std::cout << std::endl;
 
-		if (0 <= *distance && *distance <= 25)
+		if (0 <= *distance && *distance <= 25)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -46,7 +46,7 @@ public:
 				"|                                                                                                    |              \n"
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
-		else if (25 < *distance && *distance <= 90)
+		else if (25 < *distance && *distance <= 90)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -80,7 +80,7 @@ public:
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
 
-		else if (90 < *distance && *distance <= 125)
+		else if (90 < *distance && *distance <= 125)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -114,7 +114,7 @@ public:
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
 
-		else if (125 < *distance && *distance <= 190)
+		else if (125 < *distance && *distance <= 190)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -148,7 +148,7 @@ public:
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 
 		}
-		else if (190 < *distance && *distance <= 225)
+		else if (190 < *distance && *distance <= 225)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -182,7 +182,7 @@ public:
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 
 		}
-		else if (225 < *distance && *distance <= 340)
+		else if (225 < *distance && *distance <= 340)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -215,7 +215,7 @@ public:
 				"|                                                                                                    |              \n"
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
-		else if (340 < *distance && *distance <= 375)
+		else if (340 < *distance && *distance <= 375)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -248,7 +248,7 @@ public:
 				"|                                                                                                    |              \n"
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
-		else if (375 < *distance && *distance <= 475)
+		else if (375 < *distance && *distance <= 475)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"
@@ -281,7 +281,7 @@ public:
 				"|                                                                                                    |              \n"
 				"\\___________________________________________________________________________________________________/               \n" << std::endl;
 		}
-		else if (475 < *distance && *distance <= 500)
+		else if (475 < *distance && *distance <= 500)		//distance range for this specific map
 		{
 			std::cout << "/-----------\\ \n"
 				"|     ERIE  |\n"

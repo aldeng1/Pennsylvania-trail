@@ -10,7 +10,7 @@
 #include "nameanddateselection.h"
 
 
-class trailstops : public store , public probabilities
+class trailstops : public store , public probabilities , public mapdata				//base class trailstops, derived classes store, map, and probabilities
 {
 
 private:
@@ -25,9 +25,9 @@ private:
 
 public:
 
-	void Philadelphia(int* distance)
+	void Philadelphia(int* distance)			//function call when in this city
 	{	
-		while (num != 1)
+		while (num != 1)		//runs till num=1
 		{
 
 			std::cout << "Welcome to Philadelphia and the start of your adventure!" << std::endl;
@@ -35,7 +35,7 @@ public:
 			std::cin >> num;
 			std::cout << std::endl;
 
-			if (num == 2)
+			if (num == 2)		//outputs supplies
 			{
 				std::cout << "Horses:         " << supplies.gethorses() <<std::endl;
 				std::cout << "Wheels:         " << supplies.getwheels() << std::endl;
@@ -43,11 +43,11 @@ public:
 				std::cout << "Food:           " << supplies.getfood() << std::endl;
 				std::cout << "Cash:           " << supplies.getbank() << std::endl;
 			}
-			else if (num == 3)
+			else if (num == 3)		//shows map at currecnt location
 			{
 				currentlocation.map(distance);
 			}
-			else if (num == 4)
+			else if (num == 4)		//calls the store function to let the player purchase supplies
 			{
 				supplies.store1(moneystart);
 			}
@@ -55,9 +55,9 @@ public:
 		num = 0;
 	}
 
-	void Harrisburg(int* distance)
+	void Harrisburg(int* distance)			//function call when in this city
 	{
-		while (num != 1)
+		while (num != 1)		//runs till num=1
 		{
 
 			std::cout << "Welcome to Harrisburg! Ensure to prepare more supplies before you continue your adventure!" << std::endl;
@@ -65,7 +65,7 @@ public:
 			std::cin >> num;
 			std::cout << std::endl;
 
-			if (num == 2)
+			if (num == 2)		//outputs supplies
 			{
 				std::cout << "Horses:         " << supplies.gethorses() << std::endl;
 				std::cout << "Wheels:         " << supplies.getwheels() << std::endl;
@@ -73,11 +73,11 @@ public:
 				std::cout << "Food:           " << supplies.getfood() << std::endl;
 				std::cout << "Cash:           " << supplies.getbank() << std::endl;
 			}
-			else if (num == 3)
+			else if (num == 3)			//shows map at currecnt location
 			{
 				currentlocation.map(distance);
 			}
-			else if (num == 4)
+			else if (num == 4)			//calls the store function to let the player purchase supplies
 			{
 				supplies.store1(moneystart);
 			}
@@ -85,9 +85,9 @@ public:
 		num = 0;
 	}
 
-	void StateCollege(int* distance)
+	void StateCollege(int* distance)			//function call when in this city
 	{
-		while (num != 1)
+		while (num != 1)		//runs till num=1
 		{
 
 			std::cout << "Welcome to State College! Ensure to prepare more supplies before you continue your adventure!" << std::endl;
@@ -95,7 +95,7 @@ public:
 			std::cin >> num;
 			std::cout << std::endl;
 
-			if (num == 2)
+			if (num == 2)		//outputs supplies
 			{
 				std::cout << "Horses:         " << supplies.gethorses() << std::endl;
 				std::cout << "Wheels:         " << supplies.getwheels() << std::endl;
@@ -103,11 +103,11 @@ public:
 				std::cout << "Food:           " << supplies.getfood() << std::endl;
 				std::cout << "Cash:           " << supplies.getbank() << std::endl;
 			}
-			else if (num == 3)
+			else if (num == 3)				//shows map at currecnt location
 			{
 				currentlocation.map(distance);
 			}
-			else if (num == 4)
+			else if (num == 4)			//calls the store function to let the player purchase supplies
 			{
 				supplies.store1(moneystart);
 			}
@@ -115,9 +115,9 @@ public:
 		num = 0;
 	}
 
-	void Pittsburgh(int* distance)
+	void Pittsburgh(int* distance)				//function call when in this city
 	{
-		while (num != 1)
+		while (num != 1)		//runs till num=1
 		{
 
 			std::cout << "Welcome to Pittsburgh! Ensure to prepare more supplies before you continue your adventure!" << std::endl;
@@ -125,7 +125,7 @@ public:
 			std::cin >> num;
 			std::cout << std::endl;
 
-			if (num == 2)
+			if (num == 2)		//outputs supplies
 			{
 				std::cout << "Horses:         " << supplies.gethorses() << std::endl;
 				std::cout << "Wheels:         " << supplies.getwheels() << std::endl;
@@ -133,11 +133,11 @@ public:
 				std::cout << "Food:           " << supplies.getfood() << std::endl;
 				std::cout << "Cash:           " << supplies.getbank() << std::endl;
 			}
-			else if (num == 3)
+			else if (num == 3)				//shows map at currecnt location
 			{
 				currentlocation.map(distance);
 			}
-			else if (num == 4)
+			else if (num == 4)			//calls the store function to let the player purchase supplies
 			{
 				supplies.store1(moneystart);
 			}
@@ -146,11 +146,11 @@ public:
 	}
 
 
-	void midtrail(int* distance)
+	void midtrail(int* distance)		//function called every 5 miles midtrail
 	{
 		counter = 0;
 
-		while (num != 1)
+		while (num != 1)		//runs till num=1
 		{
 
 			std::cout << "You have stopped midtrail. Spend your time wisely." << std::endl;
@@ -158,7 +158,7 @@ public:
 			std::cin >> num;
 			std::cout << std::endl;
 
-			if (num == 2)
+			if (num == 2)		//outputs supplies
 			{
 				std::cout << "Horses:         " << supplies.gethorses() << std::endl;
 				std::cout << "Wheels:         " << supplies.getwheels() << std::endl;
@@ -166,36 +166,36 @@ public:
 				std::cout << "Food:           " << supplies.getfood() << std::endl;
 				std::cout << "Cash:           " << supplies.getbank() << std::endl;
 			}
-			else if (num == 3)
+			else if (num == 3)			//shows map at currecnt location
 			{
 				currentlocation.map(distance);
 			}
-			else if (num == 4)
+			else if (num == 4)			//allows player to hunt or food
 			{
 				
 
-				if (supplies.getbullets() >= 5  && counter==0)
+				if (supplies.getbullets() >= 5  && counter==0)		//checks if player has enough bullets and counter=0
 				{
 
-					std::random_device rd2;
-					std::random_device rd3;
+					std::random_device rd2;			//rand number func
+					std::random_device rd3;			//rand number func
 
-					std::mt19937 gen1(rd2());
-					std::mt19937 gen2(rd3());
+					std::mt19937 gen1(rd2());			//rand number func
+					std::mt19937 gen2(rd3());			//rand number func
 
-					std::uniform_int_distribution<> dis2(0, 50);
-					std::uniform_int_distribution<> dis3(0, 99);
+					std::uniform_int_distribution<> dis2(0, 50);		//sets range from 0 to 50
+					std::uniform_int_distribution<> dis3(0, 99);		//sets range from 0 to 99
 
-					prob = dis2(gen2);
+					prob = dis3(gen2);			//creates a random number between 0 and 99
 
-					if (prob<4)
+					if (prob<4)			//if prob 3 is 0,1,2,3, so 4% chance, this is called
 					{
-						std::string* name = chance1.getnamepassaway();
+						std::string* name = chance1.getnamepassaway();		//gets name of charcter who has passed away.
 						std::cout<< *name <<" has accentially shot themselves while trying to hunt and passed away. Remember there is always a chance hunting does not go as planned" << std::endl << std::endl;
 					}
 					else
 					{
-						hunting = dis2(gen1);
+						hunting = dis2(gen1);	//creates a random number between 0 and 
 
 						std::cout << "You have collected " << hunting << " pounds of food hunting." << std::endl;
 
@@ -216,10 +216,10 @@ public:
 				}
 			}
 		}
-		num = 0;
+		num = 0;			//sets num to 0
 	}
 
-	void setbank(int money)
+	void setbank(int money)		////function called to set intial bank value to variable moneystart
 	{
 		moneystart = money;
 	}

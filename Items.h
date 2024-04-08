@@ -6,7 +6,7 @@
 int horses, wheels=4, bullets, food;          //global varaibles
 
 
-class store
+class store         //store class
 {
 
 private:
@@ -18,16 +18,16 @@ private:
 
 public:
 
-    virtual void store1(int bankstart)
+    virtual void store1(int bankstart)      //store function called in trailstops
     {
 
-        if (i == 1)
+        if (i == 1)    //sets the intial bank for only the first time fucntion is run
         {
             bank = bankstart;
             i = i + 1;
         }
 
-        while (number != 5)
+        while (number != 5)     //runs until number=5
         {
 
             std::cout << "          Thanakorn's General Store          " << std::endl;
@@ -53,32 +53,32 @@ public:
             std::cout << std::endl << "Your bank balance is " << bank << std::endl;
 
 
-            if (number == 1)
+            if (number == 1)            //allows player to purchase horses
             {
 
                 std::cout << "How many horses would you like to purchase." << std::endl;
 
                 std::cin >> horsec;
 
-                costhorse = 40 * horsec;
+                costhorse = 40 * horsec; 
 
                 std::cout << "These horses will cost " << costhorse <<" dollars."<< std::endl;
 
-                if (bank < costhorse)
+                if (bank < costhorse)       //checks if player has enough money to purchase
                 {
                     std::cout << "You cannot afford the purchase of " << costhorse << " dollars since only have " <<bank<< " dollars left." << std::endl;
                 }
                 else
                 {
-                    bank = bank - costhorse;
+                    bank = bank - costhorse;         //decreases bank
 
                     std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
 
-                    horses = horses + horsec;
+                    horses = horses + horsec;       
                 }
 
             }
-            if (number == 2)
+            if (number == 2)            //allows player to purchase spare wheels
             {
 
                 std::cout << "How many spare wheels would you like to purchase." << std::endl;
@@ -89,13 +89,13 @@ public:
 
                 std::cout << "These wheels will cost " << costwheel << " dollars." << std::endl;
 
-                if (bank < costwheel)
+                if (bank < costwheel)       //checks if player has enough money to purchase
                 {
                     std::cout << "You cannot afford the purchase of " << costwheel << " dollars since only have " << bank << " dollars left." << std::endl;
                 }
                 else
                 {
-                    bank = bank - costwheel;
+                    bank = bank - costwheel;        //decreases bank
 
                     std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
 
@@ -103,7 +103,7 @@ public:
                 }
 
             }
-            if (number == 3)
+            if (number == 3)               //allows player to purchase food
             {
 
                 std::cout << "How many pounds of food would you like to purchase." << std::endl;
@@ -114,13 +114,13 @@ public:
 
                 std::cout << "This food will cost " << costfood << " dollars." << std::endl;
 
-                if (bank < costfood)
+                if (bank < costfood)            //checks if player has enough money to purchase
                 {
                     std::cout << "You cannot afford the purchase of " << costfood << " dollars since only have " << bank << " dollars left." << std::endl;
                 }
                 else
                 {
-                    bank = bank - costfood;
+                    bank = bank - costfood;      //decreases bank
 
                     std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
 
@@ -128,7 +128,7 @@ public:
                 }
 
             }
-            if (number == 4)
+            if (number == 4)            //allows player to purchase food
             {
 
                 std::cout << "How many bullets would you like to purchase." << std::endl;
@@ -139,13 +139,13 @@ public:
 
                 std::cout << "These bullets will cost " << costbullet << " dollars." << std::endl;
 
-                if (bank < costbullet)
+                if (bank < costbullet)      //checks if player has enough money to purchase
                 {
                     std::cout << "You cannot afford the purchase of " << costbullet << " dollars since only have " << bank << " dollars left." << std::endl;
                 }
                 else
                 {
-                    bank = bank - costbullet;
+                    bank = bank - costbullet;        //decreases bank
 
                     std::cout << "You now have " << bank << " dollars left." << std::endl << std::endl;
                     bullets = bullets + bulletc;
@@ -155,63 +155,63 @@ public:
         number = 0;
     }
 
-    int gethorses()
+    int gethorses()     //function to get horses left for use in other classes and main function
     {
         return horses;
     }
 
-    int getwheels()
+    int getwheels()     //function to get wheels left for use in other classes and main function
     {
         return wheels;
     }
 
-    int getfood()
+    int getfood()        //function to get food left for use in other classes and main function
     {
         return food;
     }
 
-    int getbullets()
+    int getbullets()         //function to get bullets left for use in other classes and main function
     {
         return bullets;
     }
 
-    int getbank()
+    int getbank()        //function to get bank left for use in other classes and main function
     {
         return bank;
     }
 
-    template <typename T>
+    template <typename T>       //creates template T
 
-    void sethorses(T dechorses)
+    void sethorses(T dechorses)          //function to set horses lower for use in other classes and main function
     {
-        horses = horses - dechorses;
+        horses = horses - dechorses;        //decreases horses by 1
     }
 
-    template <typename T>
+    template <typename T>       //creates template T
 
-    void setwheels(T decwheels)
+    void setwheels(T decwheels)          //function to set wheels lower for use in other classes and main function
     {
-        wheels = wheels - decwheels;
+        wheels = wheels - decwheels;        //decreases wheels by 1
     }
 
-    template <typename T>
+    template <typename T>       //creates template T
 
-    void setfoodmore(T incfood)
+    void setfoodmore(T incfood)          //function to set food more for use in other classes and main function
     {
-        food = food + incfood;
+        food = food + incfood;                  //increases food
     }
 
-    template <typename T>
+    template <typename T>       //creates template T
 
-    void setfoodless(T decfood)
+    void setfoodless(T decfood)           //function to set food lower for use in other classes and main function
     {
-        food = food - decfood;
+        food = food - decfood;              //decreases food
     }
 
-    template <typename T>
+    template <typename T>       //creates template T
 
-    void setbullets(T decbullets)
+    void setbullets(T decbullets)           //function to set bullets lower for use in other classes and main function
     {
-        bullets = bullets - decbullets;
+        bullets = bullets - decbullets;         //decreases bullets
     }
 };
