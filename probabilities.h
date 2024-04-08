@@ -78,7 +78,7 @@ class probabilities				//derived class proababilities
 
 			prob3 = dis(gen3);		//creates a random number between 0 and 99
 
-			if (prob3 < 4)				//if prob 3 is 0,1,2,3, so 4% chance, this is called
+			if (prob3 < 3)				//if prob 3 is 0,1,2, so 3% chance, this is called
 			{
 				update.setwheels(1);		//calls setwheels to decrease number of wheels in supplies by 1
 
@@ -104,7 +104,7 @@ class probabilities				//derived class proababilities
 			{
 				if (*distance < 200)		//calls less than 200 miles becase colder in ealier months
 				{
-					if (prob1 < 4)		//4 percent probability because it colder during these months
+					if (prob1 < 3)		//4 percent probability because it colder during these months
 					{
 						std::string* name = chance.getnamepassaway();			//gets name of charcter who has passed away.
 						std::cout << *name << " has passed away after freezing to death. Consider leaving in a later month!" << std::endl;
@@ -131,7 +131,7 @@ class probabilities				//derived class proababilities
 			{
 				if (*distance > 300)		// greater than 300 becuase it gets cold in later months
 				{
-					if (prob1 < 4)		//4 percent probability because it colder during these months
+					if (prob1 < 3)		//4 percent probability because it colder during these months
 					{
 						std::string* name = chance.getnamepassaway();				//gets name of charcter who has passed away.
 						std::cout << *name << " has passed away after freezing to death. Consider leaving in an earlier month!" << std::endl;

@@ -188,7 +188,7 @@ public:
 
 					prob = dis3(gen2);			//creates a random number between 0 and 99
 
-					if (prob<4)			//if prob 3 is 0,1,2,3, so 4% chance, this is called
+					if (prob<3)			//if prob 3 is 0,1,2 so 3% chance, this is called
 					{
 						std::string* name = chance1.getnamepassaway();		//gets name of charcter who has passed away.
 						std::cout<< *name <<" has accentially shot themselves while trying to hunt and passed away. Remember there is always a chance hunting does not go as planned" << std::endl << std::endl;

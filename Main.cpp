@@ -96,19 +96,19 @@ int main()
 
 	if (start.getcharacternumber() == 1)		// calls if charcater is redneck
 	{
-		score = (300* names.getremainingnames()) + (stop.getbank()) + (40* stop.gethorses()) + (10 * stop.getwheels()) + (stop.getbullets()) + (3 * stop.getfood());
+		score = (300.0 * names.getremainingnames()) + (stop.getbank()) + (40.0 * stop.gethorses()) + (10.0 * stop.getwheels()) + (stop.getbullets()) + (3.0 * stop.getfood());
 		//Inheritance from base class trailstops to derived class items
 		//score derived from harder things to acheive gets a better score
 
 	}
 	else if (start.getcharacternumber() == 2)		//calls if character is amish
 	{
-		score = (200 * names.getremainingnames()) + stop.getbank() + (40 * stop.gethorses()) + (10 * stop.getwheels()) + (stop.getbullets()) + (3 * stop.getfood());
+		score = (200.0 * names.getremainingnames()) + stop.getbank() + (40.0 * stop.gethorses()) + (10.0 * stop.getwheels()) + (stop.getbullets()) + (3.0 * stop.getfood());
 		//Inheritance from base class trailstops to derived class items
 	}
 	else if (start.getcharacternumber() == 3)			//calls if character is football player
 	{
-		score = (100 * names.getremainingnames()) + stop.getbank() + (40 * stop.gethorses()) + (10 * stop.getwheels()) + (stop.getbullets()) + (3 * stop.getfood());
+		score = (100.0 * names.getremainingnames()) + stop.getbank() + (40.0 * stop.gethorses()) + (10.0 * stop.getwheels()) + (stop.getbullets()) + (3.0 * stop.getfood());
 		//Inheritance from base class trailstops to derived class items
 	}	
 

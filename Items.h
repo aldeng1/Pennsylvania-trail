@@ -3,7 +3,7 @@
 
 #include "trailstops.h"
 
-int horses, wheels=4, bullets, food;          //global varaibles
+int horses, wheels=4, bullets, food,bank;          //global varaibles
 
 
 class store         //store class
@@ -13,7 +13,7 @@ private:
 
     int horsec,wheelc,foodc,bulletc;
     int costhorse, costwheel, costfood,costbullet;
-    int number, bank;
+    int number;
     int i =1;
 
 public:
